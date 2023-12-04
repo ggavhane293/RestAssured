@@ -35,8 +35,8 @@ public class HttpRequest {
 				.get("https://reqres.in/api/users?page=2")
 			
 			.then()
-				.statusCode(201)
-				.body("page", equalTo(4))
+				.statusCode(200)
+				.body("page", equalTo(2))
 				.log().all();
 		}
 		
@@ -55,7 +55,7 @@ public class HttpRequest {
 				.post("https://reqres.in/api/users")
 			
 			.then()
-				.statusCode(201)
+				.statusCode(200)
 				.log().all();
 			;
 		}
